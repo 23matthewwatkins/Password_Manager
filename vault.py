@@ -7,14 +7,12 @@ class PasswordVault:
     #function for adding a new account to the vault
     def add_password(self, website, username, password):
 
-        #a dictionary for the new account
         account = {
             "website": website,
             "username": username,
             "password": password
         }
 
-        #adds the account to the list
         self.credentials.append(account)
 
         print("\nAccount successfully added!")
@@ -23,7 +21,6 @@ class PasswordVault:
     #display all accounts in the vault
     def view_passwords(self):
 
-        #checks if vault is empty
         if len(self.credentials) == 0:
 
             print("\nYour vault is empty.")
